@@ -37,7 +37,12 @@
         <!-- 开关 -->
         <template slot-scope="scope">
           <span>on</span>
-          <el-switch active-color="#13ce66" inactive-color="#ff4949" v-model="scope.row.mg_state" @change='statusChange(scope.row)'></el-switch>
+          <el-switch
+            active-color="#13ce66"
+            inactive-color="#ff4949"
+            v-model="scope.row.mg_state"
+            @change="statusChange(scope.row)"
+          ></el-switch>
           <span>off</span>
         </template>
       </el-table-column>
@@ -203,11 +208,15 @@ export default {
     handleEdit(index, row) {
       console.log(index, row);
     },
-   async statusChange(item){
-        let res =await this.$http.put(`users/${item.id}/state/${item.mg_state}`,item,{
-             headers: { Authorization: window.sessionStorage.getItem("token") }
-        })
-       console.log(res);
+    async statusChange(item) {
+      let res = await this.$http.put(
+        `users/${item.id}/state/${item.mg_state}`,
+        item,
+        {
+          headers: { Authorization: window.sessionStorage.getItem("token") }
+        }
+      );
+      console.log(res);
     },
     // search() {
     //   this.$http

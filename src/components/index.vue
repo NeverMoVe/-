@@ -64,7 +64,7 @@ export default {
 .index-container {
   height: 100%;
 
-}\
+}
 .index-header {
   height: 60px;
   background-color: #b3c0d1;

@@ -8,6 +8,7 @@
       label-width="100px"
       class="demo-ruleForm"
       :rules="rules"
+      @submit.native.prevent
     >
       <h2>用户登录</h2>
       <el-form-item label="用户名" prop="username">
@@ -17,13 +18,14 @@
         <el-input type="password" v-model.trim="formDta.password" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" class="login-btn" @click="submitForm('ruleForm2')">登录</el-button>
+        <el-button type="primary" class="login-btn" @click="submitForm('ruleForm2')" native-type="submit" >登录</el-button>
       </el-form-item>
     </el-form>
   </div>
 </template>
 <script>
 export default {
+  
   data() {
     return {
       formDta: {
@@ -83,8 +85,19 @@ export default {
         }
       });
     }
-  }
-};
+  },
+//   created(){
+//  document.onkeydown=(e)=>{
+//   console.log(e);
+//   if(e.keyCode==13){
+//     this.submitForm(formName);
+//   }
+//   }
+ 
+
+// }
+
+}
 </script>
 <style>
 body,
