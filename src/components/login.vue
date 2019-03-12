@@ -18,7 +18,7 @@
         <el-input type="password" v-model.trim="formDta.password" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" class="login-btn" @click="submitForm('ruleForm2')" native-type="submit" >登录</el-button>
+        <el-button type="primary" class="login-btn" @click="submitForm('ruleForm2')" native-type="submit">登录</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -93,10 +93,7 @@ export default {
 //     this.submitForm(formName);
 //   }
 //   }
- 
-
 // }
-
 }
 </script>
 <style>

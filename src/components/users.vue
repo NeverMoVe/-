@@ -108,6 +108,7 @@
 <script>
 export default {
   data() {
+    // 邮箱格式验证
     var checkEmail = (rule, value, callback) => {
       setTimeout(() => {
         // 验证邮箱的正则表达式
@@ -123,6 +124,7 @@ export default {
         }
       }, 1000);
     };
+    // 手机格式验证
     var checkMobile = (rule, value, callback) => {
       if (value != "") {
         setTimeout(() => {
